@@ -14,6 +14,7 @@ Simply require the module and execute it with an optional array of configuration
 - URL: Your website's URL (required, used for sitemap reference).
 - Out: The destination path and filename.
 - Callback: Function to execute upon completion (parameters are 'error' and 'file').
+- Sitemap: Filename or path to be appended to URL. Defaults to 'sitemap.xml'
 
 Allow and Disallow can be an array, a string or null (not added to the file). Defaults are shown below:
 
@@ -26,6 +27,7 @@ robots({
   disallow: 'cgi-bin/',
   url: null,
   out: null,
-  callback: null
+  callback: null,
+  sitemap: 'sitemap.xml.gz'
 });
 ```

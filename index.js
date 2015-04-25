@@ -17,7 +17,8 @@
             disallow: 'cgi-bin/',
             url: null,
             out: null,
-            callback: null
+            callback: null,
+            sitemap: 'sitemap.xml'
         });
 
         function add(name, rule, config) {
@@ -36,7 +37,7 @@
             config = add('Disallow', options.disallow, config);
 
             if (options.url) {
-                config += '\nSitemap: ' + options.url + 'sitemap.xml';
+                config += '\nSitemap: ' + options.url + options.sitemap;
             }
 
             if (options.out) {
